@@ -1,6 +1,4 @@
-// import React from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
-import logo from '../assets/react.svg';
+import { Container, Row, Col} from 'react-bootstrap';
 import '../css/TimeLine.css';
 
 function About() {

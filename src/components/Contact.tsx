@@ -4,6 +4,8 @@ import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
 import AttachEmailIcon from "@mui/icons-material/AttachEmail";
 import FmdGoodIcon from "@mui/icons-material/FmdGood";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
+
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -28,6 +30,7 @@ function Contact() {
       )
       .then(
         (result) => {
+          console.log("result",result);
           alert("Message sent successfully!");
           setFormData({ name: "", email: "", message: "" }); // reset form
         },

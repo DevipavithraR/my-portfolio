@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../css/TimeLine.css';
@@ -6,7 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import SchoolIcon from '@mui/icons-material/School';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 
-const TimelineItem = ({ title, subtitle, percentage, date, isExperience }) => {
+type TimeLineProps = {
+  title: string;
+  subtitle: string;
+  percentage: string;
+  date: string;
+  isExperience: boolean;
+};
+
+const TimelineItem: React.FC<TimeLineProps> = ({ title, subtitle, percentage, date, isExperience }) => { 
+
   return (
     
     <div className="timeline-item" data-aos="fade-up">
