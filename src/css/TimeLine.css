@@ -1,0 +1,174 @@
+body{
+  background-color: black;
+  color: white;
+}
+.timeline {
+  position: relative;
+  border-left: 3px solid white; 
+  padding-left: 20px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 20px; /* Align text slightly away from the line */
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -11px; /* Slightly shift to overlap the line */
+  top: 0;      /* Start at the top of each item */
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  border: 3px solid black;
+  box-shadow: 0 0 0 3px white; /* Embedded circle effect */
+}
+
+.timeline-content {
+  background-color: #333333; /* White with 80% opacity */
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.timeline-content.hover-effect:hover {
+  background-color: #333333; /* Brighter on hover */
+}
+
+
+/* For experience hover effect */
+.timeline-content.hover-effect .timeline-description {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
+}
+
+.timeline-content.hover-effect:hover .timeline-description {
+  max-height: 500px;  /* adjust as needed */
+  opacity: 1;
+}
+
+.transparent-input {
+  background-color: transparent !important;
+  color: white !important;
+  border-color: white !important;
+  opacity: 0.8;
+}
+.naukri-icon {
+  display: inline-block;
+  width: 32px;   /* Size of the icon */
+  height: 32px;
+  background-image: url('../assets/naukri.jpg');  /* Local file or online URL */
+  background-size: cover;   /* Makes it fit the container */
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+.custom-card {
+  width: 360px;
+  height: auto;
+  padding: 0;
+  background-color: #333333;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body-content {
+  padding: 10px;
+  position: relative;
+  height: 100px; /* Adjust initial height */
+  transition: height 0.3s ease;
+  overflow: hidden;
+}
+
+.custom-card:hover .card-body-content {
+  height: 250px; /* Expand height on hover to reveal description */
+}
+
+.project-description {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.custom-card:hover .project-description {
+  opacity: 1;
+}
+
+.contact-info-box {
+  background-color: rgba(255, 255, 255, 0.1);
+
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 140px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.contact-form-box {
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  border: 1px solid black;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form-box:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  transform: scale(1.02); /* slight zoom effect */
+  /* background-color: rgba(255, 255, 255, 0.1); */
+    cursor: pointer; /* optional, gives feedback */
+}
+.mysql-logo {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.mysql-logo::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 50%;
+  background: #00758f; /* MySQL Blue */
+  border-radius: 50% 50% 0 0;
+  transform: rotate(-20deg);
+}
+
+.mysql-logo::after {
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  left: 25%;
+  width: 50%;
+  height: 20%;
+  background: #f29111; /* MySQL Orange */
+  border-radius: 50%;
+  transform: rotate(20deg);
+}
