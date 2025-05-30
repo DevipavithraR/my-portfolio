@@ -1,7 +1,7 @@
 // import React from 'react';
 import { Container, Row, Col } from "react-bootstrap";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import resume from "../assets/DeviPavithra_Resume_PhpFullStackDeveloper (3).pdf";
+import resume from "../assets/DeviPavithra_Resume_PhpFullStackDeveloper (1).pdf";
 import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 import '../css/TimeLine.css';
 // import logo from '../';
