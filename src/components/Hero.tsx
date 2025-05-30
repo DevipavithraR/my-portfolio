@@ -12,6 +12,8 @@ function Hero() {
     className="bg-dark"
       style={{
         padding: '70px',
+        width: "100vw",
+
       }}
     >
     <div
@@ -26,23 +28,22 @@ function Hero() {
             </h3>
             <h1
               style={{
-                // width: "500px",
-                fontSize: "70px",
-                // wordBreak: "break-word",
+                fontSize: "60px",
               }}
             >
               <span className="gradient-text">PHP Fullstack Developer</span>
             </h1>
             <br />
-
+              <h5 className="text-justify">I break down complex user experience problems to create integrity focussed solutions that connect billions of people</h5>
+            <br />
             <div className="d-flex align-items-center mt-3">
               <a
                 href={resume}
                 download="DeviPavithra_Resume.pdf"
-                className="btn btn-info text-dark p-3 d-flex align-items-center me-3"
+                className="btn btn-info text-light p-3 d-flex align-items-center me-3"
               >
                 Download My Resume{" "}
-                <ArrowCircleDownIcon style={{ fontSize: 30, color: "black" }} />
+                <ArrowCircleDownIcon style={{ fontSize: 30, color: "white" }} />
               </a>
               <a
                 href="https://github.com/DevipavithraR"

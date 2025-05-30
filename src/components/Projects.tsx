@@ -24,7 +24,8 @@ function Projects() {
   ];
 
   return (
-    <div className="bg-dark" style={{ padding: '70px' }}>
+        
+    <div className="bg-dark" style={{width: "100vw", padding: '70px' }}>
       <div id="projects" className="py-5">
                   <h2 className="text-center mb-4 text-light" data-aos="fade-up">Projects</h2>
 

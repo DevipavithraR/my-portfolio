@@ -172,3 +172,26 @@ body{
   border-radius: 50%;
   transform: rotate(20deg);
 }
+
+
+.skills-grid {
+  display: grid;
+  gap: 20px;
+  width: 90%;
+  max-width: 900px;
+  justify-items: center;
+  grid-template-columns: repeat(2, 1fr); /* Default: 2 columns for small screens */
+}
+
+@media (min-width: 768px) { /* Medium devices (tablets) and up */
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for medium screens */
+  }
+}
+
+@media (min-width: 1024px) { /* Large devices (laptops) and up */
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+    grid-template-rows: repeat(2, auto); /* Ensure it forms 2 rows */
+  }
+}

@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 
 function Footer() {
   return (
-    <footer className="bg-dark text-white py-3 text-center">
+    <footer className="bg-dark text-white py-3 text-center" style={{width: "100vw"}}>
       <Container>
         <p>&copy; {new Date().getFullYear()} Devi Pavithra R. All rights reserved.</p>
       </Container>

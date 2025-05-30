@@ -23,7 +23,7 @@ const Skills = () => {
 
   return (
     <div
-    id='skill'
+      id='skill'
       style={{
         backgroundColor: '#001f3f',
         minHeight: '70vh',
@@ -32,6 +32,8 @@ const Skills = () => {
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
+        width: "100vw",
+
       }}
     >
       <h2
@@ -40,27 +42,32 @@ const Skills = () => {
         style={{ whiteSpace: 'nowrap' }}
       >
         Skills
-      </h2><br />
+      </h2>
+      <br />
 
       <div
+        className="skills-grid"
         data-aos="fade-up"
-        style={{
-          display: 'flex',
-          gap: '20px',
-          overflowX: 'auto',
-          padding: '10px',
-          maxWidth: '90vw',
-          justifyContent: 'center',
-          flexWrap: 'nowrap', // Keeps it in one row, scrolls if overflow
-        }}
       >
-    {skills.map((skill, index) => (
+        {skills.map((skill, index) => (
+          <SkillBox key={index} skill={skill} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+interface Skill {
+  icon: string;
+  color: string;
+  name: string;
+}
+
+const SkillBox: React.FC<{ skill: Skill }> = ({ skill }) => (
   <div
-    key={index}
     style={{
-      flex: '0 0 auto',
-      width: '120px',
-      height: '120px',
+      width: '100px',
+      height: '100px',
       borderRadius: '10px',
       backgroundColor: 'black',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
@@ -70,22 +77,13 @@ const Skills = () => {
       justifyContent: 'center',
       color: skill.color,
       textAlign: 'center',
-      padding: '20px',
+      padding: '10px',
       cursor: 'default',
     }}
   >
-    {typeof skill.icon === 'string' ? (
-      <i className={skill.icon} style={{ fontSize: '60px' }}></i>
-    ) : (
-      <img src={skill.icon} alt={skill.name} style={{ width: '60px', height: '60px', objectFit: 'contain' }} />
-    )}
-    <span style={{ color: 'white', fontSize: '14px', marginTop: '10px' }}>{skill.name}</span>
+    <i className={skill.icon} style={{ fontSize: '40px' }}></i>
+    <span style={{ color: 'white', fontSize: '12px', marginTop: '5px' }}>{skill.name}</span>
   </div>
-))}
-
-      </div>
-    </div>
-  );
-};
+);
 
 export default Skills;

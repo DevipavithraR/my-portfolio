@@ -42,7 +42,20 @@ function Contact() {
   };
 
   return (
-    <div style={{ backgroundColor: "#001f3f", padding: "70px" }}>
+    <div style={{ backgroundColor: "#001f3f", padding: "70px",width: "100vw" }}>
+       <h2
+        className="text-center mb-4 text-light"
+        data-aos="zoom-in"
+        style={{ whiteSpace: 'nowrap' }}
+      >
+        Let's work <span className="gradient-text">together!</span>
+      </h2>
+      <h5  
+        className="text-center mb-4 text-light"
+        data-aos="zoom-in"
+        style={{ whiteSpace: 'nowrap' }}>
+          Just simple like that!
+      </h5><br />
       <Container>
         <Row>
           <Col md={6} style={{ color: "white" }} className="contact-form-box">
